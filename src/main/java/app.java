@@ -1,13 +1,19 @@
+
 import java.sql.*;
 
-public class app {
+public class App {
 
-  public static void main(String []args){
+  public static void main(String[] args){
 
-    Connection connection = MBSQLConnectionUtility.getConnection(); 
 
-    
+    Connection connection = MBSQLConnectionUtility.getConnection();
+    try {
+      System.out.println(connection.isValid(5));
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
 
   }
   
 }
+

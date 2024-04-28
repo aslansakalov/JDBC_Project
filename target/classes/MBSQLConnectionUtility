@@ -1,3 +1,4 @@
+
 import java.sql.*;
 
 public class MBSQLConnectionUtility{
@@ -6,15 +7,12 @@ public class MBSQLConnectionUtility{
   static String username = "student";
   static String password = "Student2022Q";
 
-  static Connection getConnection(){
+  Connection getConnection(){
 
     Connection connection = null;
 
-
     try {
-
       connection = DriverManager.getConnection(url, username, password);
-      
     } catch (SQLException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
